@@ -13,4 +13,4 @@ npm config set prefix '~/.npm-global'
 
 # Step 2: Install PM2
 npm install pm2-5.2.2.tgz -g --verbose --no-progress
-npm install application/toolbox-offline-exporter-poc-nodejs-1.0.0.tgz --verbose --no-progress
+npm install toolbox-offline-exporter-poc-nodejs-1.0.0.tgz --verbose --no-progress

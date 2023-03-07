@@ -11,3 +11,6 @@ tar -xvf npm-8.1.0.tgz -C ~/.npm-global --strip-components=1
 echo 'export PATH=~/.npm-global/bin:$PATH' >> ~/.bashrc
 source ~/.bashrc
 npm config set prefix '~/.npm-global'
+
+# Step 3: Install PM2
+npm install pm2-5.2.2.tgz -g --verbose --no-progress

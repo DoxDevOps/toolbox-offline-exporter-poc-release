@@ -5,5 +5,11 @@ sudo chown -R root:root /usr/local/node-v14.18.0-linux-x64
 sudo ln -s /usr/local/node-v14.18.0-linux-x64/bin/node /usr/bin/node
 sudo ln -s /usr/local/node-v14.18.0-linux-x64/bin/npm /usr/bin/npm
 
+# Step 2: Install npm from the downloaded npm tarball
+mkdir -p ~/.npm-global
+echo 'export PATH=~/.npm-global/bin:$PATH' >> ~/.bashrc
+source ~/.bashrc
+npm config set prefix '~/.npm-global'
+
 # Step 2: Install PM2
 npm install pm2-5.2.2.tgz -g --verbose --no-progress

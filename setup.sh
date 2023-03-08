@@ -21,7 +21,7 @@ echo '#                   ToolBox Configuration                    #'
 echo '#                                                            #'
 echo '##############################################################'
 node setup.js
-pm2 start index.js --name toolbox
+pm2 start index.js -f --name toolbox
 
 
 echo '######################################################################'

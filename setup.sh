@@ -24,8 +24,6 @@ node setup.js
 pm2 delete toolbox
 pm2 start index.js -f --name toolbox
 
-
-echo '######################################################################'
 echo ''
 echo 'ToolBox listens on port 6070'
 echo 'using the server ip address'

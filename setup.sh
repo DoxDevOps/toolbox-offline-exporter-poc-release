@@ -21,6 +21,7 @@ echo '#                   ToolBox Configuration                    #'
 echo '#                                                            #'
 echo '##############################################################'
 node setup.js
+pm2 delete toolbox
 pm2 start index.js -f --name toolbox
 
 

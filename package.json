@@ -1,0 +1,22 @@
+{
+  "name": "toolbox-offline-exporter-poc-release",
+  "version": "1.0.0",
+  "description": "App that exports a number of metrices from a host using QR code",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DoxDevOps/toolbox-offline-exporter-poc-release.git"
+  },
+  "author": "dominickasanga",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DoxDevOps/toolbox-offline-exporter-poc-release/issues"
+  },
+  "homepage": "https://github.com/DoxDevOps/toolbox-offline-exporter-poc-release#readme",
+  "dependencies": {
+    "pm2": "^3.0.0"
+  }
+}

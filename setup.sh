@@ -12,17 +12,24 @@ source ~/.bashrc
 npm config set prefix '~/.npm-global'
 
 # Step 3: Install PM2
-npm install pm2-5.2.2.tgz -g --verbose --no-progress
-npm install toolbox-offline-exporter-poc-nodejs-1.0.0.tgz --verbose --no-progress
-cd node_modules/toolbox-offline-exporter-poc-nodejs
-npm install --verbose --no-progress
+rm node_modules
+tar -xvf node_modules.tar.gz
+npm install --no-package-lock
+
+rm toolbox-offline-exporter-poc-nodejs
+tar -xvf toolbox-offline-exporter-poc-nodejs.tar.gz
+cd toolbox-offline-exporter-poc-nodejs
+npm install --no-package-lock
+
 echo '##############################################################'
 echo '#                   ToolBox Configuration                    #'
 echo '#                                                            #'
 echo '##############################################################'
 node setup.js
-pm2 delete toolbox
-pm2 start index.js -f --name toolbox
+cd ../
+
+npx pm2 delete toolbox
+npx pm2 start start index.js -f --name toolbox --cwd toolbox-offline-exporter-poc-nodejs
 
 echo ''
 echo 'ToolBox listens on port 6070'

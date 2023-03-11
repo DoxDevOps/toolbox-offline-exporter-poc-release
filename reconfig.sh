@@ -1,10 +1,11 @@
-cd node_modules/toolbox-offline-exporter-poc-nodejs
 echo '##############################################################'
 echo '#                   ToolBox Configuration                    #'
 echo '#                                                            #'
 echo '##############################################################'
+cd toolbox-offline-exporter-poc-nodejs
 node setup.js
-pm2 restart toolbox
+cd ../
+npx pm2 restart toolbox
 
 echo ''
 echo 'ToolBox listens on port 6070'

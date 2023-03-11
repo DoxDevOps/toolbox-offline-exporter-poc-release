@@ -31,7 +31,7 @@ node setup.js
 cd ../
 
 npx pm2 delete toolbox
-npx pm2 start start index.js -f --name toolbox --cwd toolbox-offline-exporter-poc-nodejs
+npx pm2 start index.js -f --name toolbox --cwd toolbox-offline-exporter-poc-nodejs
 
 echo ''
 echo 'ToolBox listens on port 6070'

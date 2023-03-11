@@ -14,11 +14,9 @@ source ~/.bashrc
 npm config set prefix '~/.npm-global'
 
 # Step 3: Install PM2
-rm node_modules
 tar -xvf node_modules.tar.gz
 npm install --no-package-lock
 
-rm toolbox-offline-exporter-poc-nodejs
 tar -xvf toolbox-offline-exporter-poc-nodejs.tar.gz
 cd toolbox-offline-exporter-poc-nodejs
 npm install --no-package-lock
@@ -32,6 +30,15 @@ cd ../
 
 npx pm2 delete toolbox
 npx pm2 start index.js -f --name toolbox --cwd toolbox-offline-exporter-poc-nodejs
+
+# Step 4: Check if the script is already in crontab
+if crontab -l | grep -q '_init_.sh'; then
+  echo "Script already in crontab"
+else
+  # Step 5: Add the script to crontab
+  (crontab -l 2>/dev/null; echo "@reboot /var/www/toolbox-offline-exporter-poc-release/_init_.sh") | crontab -
+  echo "Script added to crontab"
+fi
 
 echo ''
 echo 'ToolBox listens on port 6070'

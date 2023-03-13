@@ -33,11 +33,11 @@ npx pm2 start index.js -f --name toolbox --cwd toolbox-offline-exporter-poc-node
 
 # Step 4: Check if the script is already in crontab
 if crontab -l | grep -q '_init_.sh'; then
-  echo ""
+  echo ''
 else
   # Step 5: Add the script to crontab
   (crontab -l 2>/dev/null; echo "@reboot /var/www/toolbox-offline-exporter-poc-release/_init_.sh") | crontab -
-  echo ""
+  echo ''
 fi
 
 echo ''

@@ -15,11 +15,9 @@ npm config set prefix '~/.npm-global'
 
 # Step 3: Install PM2
 tar -xvf node_modules.tar.gz
-npm install --no-package-lock
 
 tar -xvf toolbox-offline-exporter-poc-nodejs.tar.gz
 cd toolbox-offline-exporter-poc-nodejs
-npm install --no-package-lock
 
 echo '##############################################################'
 echo '#                   ToolBox Configuration                    #'

@@ -3,7 +3,7 @@ echo '#                   ToolBox Configuration                    #'
 echo '#                                                            #'
 echo '##############################################################'
 cd toolbox-offline-exporter-poc-nodejs
-node setup.js
+/usr/local/node-v14.18.0-linux-x64/bin/node setup.js
 cd ../
 npx pm2 restart toolbox
 

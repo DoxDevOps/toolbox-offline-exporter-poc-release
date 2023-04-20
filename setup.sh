@@ -27,7 +27,7 @@ echo '##############################################################'
 cd ../
 
 npx pm2 delete toolbox
-npx pm2 start index.js -f --name toolbox --cwd toolbox-offline-exporter-poc-nodejs
+npx pm2 start index.js -f --name toolbox --cwd toolbox-offline-exporter-poc-nodejs --interpreter /usr/local/node-v14.18.0-linux-x64/bin/node
 
 # Step 4: Check if the script is already in crontab
 if crontab -l | grep -q '_init_.sh'; then

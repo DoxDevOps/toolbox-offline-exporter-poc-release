@@ -11,7 +11,7 @@ sudo ln -s /usr/local/node-v14.18.0-linux-x64/bin/npx /usr/bin/npx
 mkdir -p ~/.npm-global
 echo 'export PATH=~/.npm-global/bin:$PATH' >> ~/.bashrc
 source ~/.bashrc
-/usr/local/node-v14.18.0-linux-x64/bin/npm config set prefix '~/.npm-global'
+# /usr/local/node-v14.18.0-linux-x64/bin/npm config set prefix '~/.npm-global'
 
 # Step 3: Install PM2
 tar -xvf node_modules.tar.gz
